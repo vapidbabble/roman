@@ -29,28 +29,6 @@ class Roman
         roman
     end
 
-    def convert_to_arabic_old(str)
-        arabic=0
-        myind=0
-        edge=false
-        str.each_char do |ele|
-            if edge
-                edge=false
-                myind+=1
-                next
-            end
-            value=@romanlist[ele]
-            substr=str.slice(myind,2)
-            if (substr.length == 2)  && (value < @romanlist[substr[1]])
-                value=@romanlist[substr]
-                edge=true
-            end
-            myind+=1
-            arabic+=value
-        end
-        arabic
-    end
-    
     def convert_to_arabic(str)
         arabic=0
         @romanlist.each do |rsymbol,num|

@@ -13,13 +13,6 @@ class TestConvert < Minitest::Test
     assert_equal "MMMMMMDCCLXXXIX", @convert.convert_to_roman(6789)
   end
 
-  def test_to_arabic_old
-    assert_equal @convert.convert_to_arabic_old("VIII"), 8
-    assert_equal @convert.convert_to_arabic_old("XLIX"), 49
-    assert_equal @convert.convert_to_arabic_old("MMXV"), 2015
-    assert_equal @convert.convert_to_arabic_old("MMMMMMDCCLXXXIX"), 6789
-  end
-
   def test_to_arabic
     assert_equal @convert.convert_to_arabic("VIII"), 8
     assert_equal @convert.convert_to_arabic("XLIX"), 49

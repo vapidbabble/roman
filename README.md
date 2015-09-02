@@ -8,3 +8,4 @@ need to:
 
 1. remove convert_to_arabic_old
 2. added error_handling?
+3. move code to lib?
